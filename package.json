@@ -1,0 +1,33 @@
+{
+  "name": "bit-chow",
+  "version": "1.0.0",
+  "description": "Crappy mean social network",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Devmarshall/Bit-Chow.git"
+  },
+  "author": "devMarshall",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Devmarshall/Bit-Chow/issues"
+  },
+  "homepage": "https://github.com/Devmarshall/Bit-Chow#readme",
+  "dependencies": {
+    "angular": "^1.6.6",
+    "body-parser": "^1.18.1",
+    "bootstrap": "^3.3.7",
+    "chokidar": "^1.7.0",
+    "cloudinary": "^1.9.0",
+    "connect-multiparty": "^2.0.0",
+    "cors": "^2.8.4",
+    "express": "^4.15.4",
+    "mongoose": "^4.11.12",
+    "ng-file-upload": "^12.2.13",
+    "node-schedule": "^1.2.5",
+    "socket.io": "^2.0.3"
+  }
+}
