@@ -8,7 +8,7 @@ var schedule = require('node-schedule');
 
 var app = express();
 
-mongoose.connect('mongodb://localhost:27017/BitChow');
+// mongoose.connect('mongodb://localhost:27017/BitChow');
 
 app.use(bodyParser.json());
 app.use('/app', express.static(__dirname + '/app'));
@@ -22,7 +22,7 @@ app.get('/', function (req, res) {
     });
 });
 
-var server = app.listen('3003', function () {
+var server = app.listen(3003, 'localhost', function () {
     var host = server.address().address;
     var port = server.address().port;
 

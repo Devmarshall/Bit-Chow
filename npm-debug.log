@@ -1,0 +1,238 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'C:\\Program Files\\nodejs\\node.exe',
+1 verbose cli   'C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'install',
+1 verbose cli   '@uirouter/angularjs' ]
+2 info using npm@3.10.10
+3 info using node@v6.11.2
+4 silly loadCurrentTree Starting
+5 silly install loadCurrentTree
+6 silly install readLocalPackageData
+7 silly fetchPackageMetaData @uirouter/angularjs
+8 silly fetchNamedPackageData @uirouter/angularjs
+9 silly mapToRegistry name @uirouter/angularjs
+10 silly mapToRegistry scope (from package name) @uirouter
+11 verbose mapToRegistry no registry URL found in name for scope @uirouter
+12 silly mapToRegistry using default registry
+13 silly mapToRegistry registry https://registry.npmjs.org/
+14 silly mapToRegistry data Result {
+14 silly mapToRegistry   raw: '@uirouter/angularjs',
+14 silly mapToRegistry   scope: '@uirouter',
+14 silly mapToRegistry   escapedName: '@uirouter%2fangularjs',
+14 silly mapToRegistry   name: '@uirouter/angularjs',
+14 silly mapToRegistry   rawSpec: '',
+14 silly mapToRegistry   spec: 'latest',
+14 silly mapToRegistry   type: 'tag' }
+15 silly mapToRegistry uri https://registry.npmjs.org/@uirouter%2fangularjs
+16 verbose request uri https://registry.npmjs.org/@uirouter%2fangularjs
+17 verbose request no auth needed
+18 info attempt registry request try #1 at 7:09:50 AM
+19 verbose request id b8292327a4aa9c58
+20 verbose etag W/"598f87cb-a281"
+21 verbose lastModified Sat, 12 Aug 2017 22:57:15 GMT
+22 http request GET https://registry.npmjs.org/@uirouter%2fangularjs
+23 info retry will retry, error on last attempt: Error: getaddrinfo ENOTFOUND registry.npmjs.org registry.npmjs.org:443
+24 info attempt registry request try #2 at 7:10:12 AM
+25 verbose etag W/"598f87cb-a281"
+26 verbose lastModified Sat, 12 Aug 2017 22:57:15 GMT
+27 http request GET https://registry.npmjs.org/@uirouter%2fangularjs
+28 info retry will retry, error on last attempt: Error: getaddrinfo ENOTFOUND registry.npmjs.org registry.npmjs.org:443
+29 info attempt registry request try #3 at 7:11:23 AM
+30 verbose etag W/"598f87cb-a281"
+31 verbose lastModified Sat, 12 Aug 2017 22:57:15 GMT
+32 http request GET https://registry.npmjs.org/@uirouter%2fangularjs
+33 http 304 https://registry.npmjs.org/@uirouter%2fangularjs
+34 verbose headers { date: 'Sat, 23 Sep 2017 06:12:18 GMT',
+34 verbose headers   via: '1.1 varnish',
+34 verbose headers   'cache-control': 'max-age=0',
+34 verbose headers   etag: 'W/"598f87cb-a281"',
+34 verbose headers   age: '0',
+34 verbose headers   connection: 'keep-alive',
+34 verbose headers   'x-served-by': 'cache-lcy1149-LCY',
+34 verbose headers   'x-cache': 'MISS',
+34 verbose headers   'x-cache-hits': '0',
+34 verbose headers   'x-timer': 'S1506147138.394385,VS0,VE613',
+34 verbose headers   vary: 'Accept-Encoding' }
+35 silly get cb [ 304,
+35 silly get   { date: 'Sat, 23 Sep 2017 06:12:18 GMT',
+35 silly get     via: '1.1 varnish',
+35 silly get     'cache-control': 'max-age=0',
+35 silly get     etag: 'W/"598f87cb-a281"',
+35 silly get     age: '0',
+35 silly get     connection: 'keep-alive',
+35 silly get     'x-served-by': 'cache-lcy1149-LCY',
+35 silly get     'x-cache': 'MISS',
+35 silly get     'x-cache-hits': '0',
+35 silly get     'x-timer': 'S1506147138.394385,VS0,VE613',
+35 silly get     vary: 'Accept-Encoding' } ]
+36 verbose etag https://registry.npmjs.org/@uirouter%2fangularjs from cache
+37 verbose get saving @uirouter/angularjs to C:\Users\Ndu_O\AppData\Roaming\npm-cache\registry.npmjs.org\_40uirouter_252fangularjs\.cache.json
+38 verbose correctMkdir C:\Users\Ndu_O\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+39 silly install normalizeTree
+40 silly loadCurrentTree Finishing
+41 silly loadIdealTree Starting
+42 silly install loadIdealTree
+43 silly cloneCurrentTree Starting
+44 silly install cloneCurrentTreeToIdealTree
+45 silly cloneCurrentTree Finishing
+46 silly loadShrinkwrap Starting
+47 silly install loadShrinkwrap
+48 silly loadShrinkwrap Finishing
+49 silly loadAllDepsIntoIdealTree Starting
+50 silly install loadAllDepsIntoIdealTree
+51 silly resolveWithNewModule @uirouter/angularjs@1.0.6 checking installable status
+52 silly cache add args [ '@uirouter/angularjs', null ]
+53 verbose cache add spec @uirouter/angularjs
+54 silly cache add parsed spec Result {
+54 silly cache add   raw: '@uirouter/angularjs',
+54 silly cache add   scope: '@uirouter',
+54 silly cache add   escapedName: '@uirouter%2fangularjs',
+54 silly cache add   name: '@uirouter/angularjs',
+54 silly cache add   rawSpec: '',
+54 silly cache add   spec: 'latest',
+54 silly cache add   type: 'tag' }
+55 silly addNamed @uirouter/angularjs@latest
+56 verbose addNamed "latest" is being treated as a dist-tag for @uirouter/angularjs
+57 info addNameTag [ '@uirouter/angularjs', 'latest' ]
+58 silly mapToRegistry name @uirouter/angularjs
+59 silly mapToRegistry scope (from package name) @uirouter
+60 verbose mapToRegistry no registry URL found in name for scope @uirouter
+61 silly mapToRegistry using default registry
+62 silly mapToRegistry registry https://registry.npmjs.org/
+63 silly mapToRegistry data Result {
+63 silly mapToRegistry   raw: '@uirouter/angularjs',
+63 silly mapToRegistry   scope: '@uirouter',
+63 silly mapToRegistry   escapedName: '@uirouter%2fangularjs',
+63 silly mapToRegistry   name: '@uirouter/angularjs',
+63 silly mapToRegistry   rawSpec: '',
+63 silly mapToRegistry   spec: 'latest',
+63 silly mapToRegistry   type: 'tag' }
+64 silly mapToRegistry uri https://registry.npmjs.org/@uirouter%2fangularjs
+65 verbose addNameTag registry:https://registry.npmjs.org/@uirouter%2fangularjs not in flight; fetching
+66 verbose get https://registry.npmjs.org/@uirouter%2fangularjs not expired, no request
+67 silly addNameTag next cb for @uirouter/angularjs with tag latest
+68 silly addNamed @uirouter/angularjs@1.0.6
+69 verbose addNamed "1.0.6" is a plain semver version for @uirouter/angularjs
+70 silly cache afterAdd @uirouter/angularjs@1.0.6
+71 verbose afterAdd C:\Users\Ndu_O\AppData\Roaming\npm-cache\@uirouter\angularjs\1.0.6\package\package.json not in flight; writing
+72 verbose correctMkdir C:\Users\Ndu_O\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+73 verbose afterAdd C:\Users\Ndu_O\AppData\Roaming\npm-cache\@uirouter\angularjs\1.0.6\package\package.json written
+74 silly fetchNamedPackageData @uirouter/core
+75 silly mapToRegistry name @uirouter/core
+76 silly mapToRegistry scope (from package name) @uirouter
+77 verbose mapToRegistry no registry URL found in name for scope @uirouter
+78 silly mapToRegistry using default registry
+79 silly mapToRegistry registry https://registry.npmjs.org/
+80 silly mapToRegistry data Result {
+80 silly mapToRegistry   raw: '@uirouter/core',
+80 silly mapToRegistry   scope: '@uirouter',
+80 silly mapToRegistry   escapedName: '@uirouter%2fcore',
+80 silly mapToRegistry   name: '@uirouter/core',
+80 silly mapToRegistry   rawSpec: '',
+80 silly mapToRegistry   spec: 'latest',
+80 silly mapToRegistry   type: 'tag' }
+81 silly mapToRegistry uri https://registry.npmjs.org/@uirouter%2fcore
+82 verbose request uri https://registry.npmjs.org/@uirouter%2fcore
+83 verbose request no auth needed
+84 info attempt registry request try #1 at 7:11:30 AM
+85 verbose etag W/"598f7203-687b"
+86 verbose lastModified Sat, 12 Aug 2017 21:24:19 GMT
+87 http request GET https://registry.npmjs.org/@uirouter%2fcore
+88 http 304 https://registry.npmjs.org/@uirouter%2fcore
+89 verbose headers { date: 'Sat, 23 Sep 2017 06:12:19 GMT',
+89 verbose headers   via: '1.1 varnish',
+89 verbose headers   'cache-control': 'max-age=0',
+89 verbose headers   etag: 'W/"598f7203-687b"',
+89 verbose headers   age: '0',
+89 verbose headers   connection: 'keep-alive',
+89 verbose headers   'x-served-by': 'cache-lcy1149-LCY',
+89 verbose headers   'x-cache': 'MISS',
+89 verbose headers   'x-cache-hits': '0',
+89 verbose headers   'x-timer': 'S1506147140.545504,VS0,VE618',
+89 verbose headers   vary: 'Accept-Encoding' }
+90 silly get cb [ 304,
+90 silly get   { date: 'Sat, 23 Sep 2017 06:12:19 GMT',
+90 silly get     via: '1.1 varnish',
+90 silly get     'cache-control': 'max-age=0',
+90 silly get     etag: 'W/"598f7203-687b"',
+90 silly get     age: '0',
+90 silly get     connection: 'keep-alive',
+90 silly get     'x-served-by': 'cache-lcy1149-LCY',
+90 silly get     'x-cache': 'MISS',
+90 silly get     'x-cache-hits': '0',
+90 silly get     'x-timer': 'S1506147140.545504,VS0,VE618',
+90 silly get     vary: 'Accept-Encoding' } ]
+91 verbose etag https://registry.npmjs.org/@uirouter%2fcore from cache
+92 verbose get saving @uirouter/core to C:\Users\Ndu_O\AppData\Roaming\npm-cache\registry.npmjs.org\_40uirouter_252fcore\.cache.json
+93 verbose correctMkdir C:\Users\Ndu_O\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+94 silly resolveWithNewModule @uirouter/core@5.0.6 checking installable status
+95 silly cache add args [ '@uirouter/core@=5.0.6', null ]
+96 verbose cache add spec @uirouter/core@=5.0.6
+97 silly cache add parsed spec Result {
+97 silly cache add   raw: '@uirouter/core@=5.0.6',
+97 silly cache add   scope: '@uirouter',
+97 silly cache add   escapedName: '@uirouter%2fcore',
+97 silly cache add   name: '@uirouter/core',
+97 silly cache add   rawSpec: '=5.0.6',
+97 silly cache add   spec: '5.0.6',
+97 silly cache add   type: 'version' }
+98 silly addNamed @uirouter/core@5.0.6
+99 verbose addNamed "5.0.6" is a plain semver version for @uirouter/core
+100 silly mapToRegistry name @uirouter/core
+101 silly mapToRegistry scope (from package name) @uirouter
+102 verbose mapToRegistry no registry URL found in name for scope @uirouter
+103 silly mapToRegistry using default registry
+104 silly mapToRegistry registry https://registry.npmjs.org/
+105 silly mapToRegistry data Result {
+105 silly mapToRegistry   raw: '@uirouter/core',
+105 silly mapToRegistry   scope: '@uirouter',
+105 silly mapToRegistry   escapedName: '@uirouter%2fcore',
+105 silly mapToRegistry   name: '@uirouter/core',
+105 silly mapToRegistry   rawSpec: '',
+105 silly mapToRegistry   spec: 'latest',
+105 silly mapToRegistry   type: 'tag' }
+106 silly mapToRegistry uri https://registry.npmjs.org/@uirouter%2fcore
+107 verbose addNameVersion registry:https://registry.npmjs.org/@uirouter%2fcore not in flight; fetching
+108 verbose get https://registry.npmjs.org/@uirouter%2fcore not expired, no request
+109 silly mapToRegistry name @uirouter/core
+110 silly mapToRegistry scope (from package name) @uirouter
+111 verbose mapToRegistry no registry URL found in name for scope @uirouter
+112 silly mapToRegistry using default registry
+113 silly mapToRegistry registry https://registry.npmjs.org/
+114 silly mapToRegistry data Result {
+114 silly mapToRegistry   raw: '@uirouter/core',
+114 silly mapToRegistry   scope: '@uirouter',
+114 silly mapToRegistry   escapedName: '@uirouter%2fcore',
+114 silly mapToRegistry   name: '@uirouter/core',
+114 silly mapToRegistry   rawSpec: '',
+114 silly mapToRegistry   spec: 'latest',
+114 silly mapToRegistry   type: 'tag' }
+115 silly mapToRegistry uri https://registry.npmjs.org/@uirouter%2fcore
+116 verbose addRemoteTarball https://registry.npmjs.org/@uirouter/core/-/core-5.0.6.tgz not in flight; adding
+117 verbose addRemoteTarball [ 'https://registry.npmjs.org/@uirouter/core/-/core-5.0.6.tgz',
+117 verbose addRemoteTarball   '251e1fc4d6ce8fe47e374bb86971e68a2ef1b323' ]
+118 info retry fetch attempt 1 at 7:11:31 AM
+119 info attempt registry request try #1 at 7:11:31 AM
+120 http fetch GET https://registry.npmjs.org/@uirouter/core/-/core-5.0.6.tgz
+121 http fetch 200 https://registry.npmjs.org/@uirouter/core/-/core-5.0.6.tgz
+122 verbose stack Error: kill ENOSYS
+122 verbose stack     at exports._errnoException (util.js:1020:11)
+122 verbose stack     at process.kill (internal/process.js:190:13)
+122 verbose stack     at process.listener (C:\Program Files\nodejs\node_modules\npm\node_modules\npmlog\node_modules\gauge\node_modules\signal-exit\index.js:86:15)
+122 verbose stack     at emitNone (events.js:91:20)
+122 verbose stack     at process.emit (events.js:185:7)
+122 verbose stack     at processEmit (C:\Program Files\nodejs\node_modules\npm\node_modules\npmlog\node_modules\gauge\node_modules\signal-exit\index.js:146:32)
+122 verbose stack     at processEmit (C:\Program Files\nodejs\node_modules\npm\node_modules\npm-registry-client\node_modules\npmlog\node_modules\gauge\node_modules\signal-exit\index.js:146:32)
+122 verbose stack     at Signal.wrap.onsignal (internal/process.js:217:44)
+123 verbose cwd C:\Users\Ndu_O\Documents\GitHub\Bit-Chow
+124 error Windows_NT 10.0.15063
+125 error argv "C:\\Program Files\\nodejs\\node.exe" "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "install" "@uirouter/angularjs"
+126 error node v6.11.2
+127 error npm  v3.10.10
+128 error code ENOSYS
+129 error errno ENOSYS
+130 error syscall kill
+131 error kill ENOSYS
+132 error If you need help, you may report this error at:
+132 error     <https://github.com/npm/npm/issues>
+133 verbose exit [ 1, true ]

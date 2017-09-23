@@ -18,6 +18,7 @@
   "homepage": "https://github.com/Devmarshall/Bit-Chow#readme",
   "dependencies": {
     "angular": "^1.6.6",
+    "angular-ui-router": "^1.0.3",
     "body-parser": "^1.18.1",
     "bootstrap": "^3.3.7",
     "chokidar": "^1.7.0",
@@ -28,6 +29,7 @@
     "mongoose": "^4.11.12",
     "ng-file-upload": "^12.2.13",
     "node-schedule": "^1.2.5",
+    "popper.js": "^1.12.5",
     "socket.io": "^2.0.3"
   }
 }

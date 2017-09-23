@@ -1,15 +1,39 @@
 <!DOCTYPE html>
-<html lang="en">
+<html ng-app="BitChow">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>BitChow</title>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="/app/css/main.css">
+
+
+    <script src="/node_modules/angular/angular.js"></script>
+    <script src="/node_modules/angular-ui-router/release/angular-ui-router.js"></script>
+    <script src="/app/socket.io.js"></script>
+    <script src="/node_modules/popper.js/dist/popper.js"></script>
+    <script src="/node_modules/jquery/dist/jquery.js"></script>
+
+    <script src="/app/app.js"></script>
+    <script src="/app/main-view-controller.js"></script>
+    <script src="/app/nav-controller.js"></script>
+
 </head>
 
-<body>
+<nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark" ng-controller="NavController">
+    <form class="form-inline">
+        <button class="btn btn-outline-success" type="button">Main button</button>
+        <button class="btn btn-sm align-middle btn-outline-secondary" type="button">Smaller button</button>
+    </form>
+</nav>
 
+
+<body>
+    <div ui-view></div>
 </body>
 
 </html>
