@@ -5,6 +5,7 @@ var mongoose = require('mongoose');
 var cors = require('cors');
 var socketio = require('socket.io');
 var schedule = require('node-schedule');
+var morgan = require('morgan');
 
 var app = express();
 

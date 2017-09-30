@@ -14,23 +14,36 @@
 
     <script src="/node_modules/angular/angular.js"></script>
     <script src="/node_modules/angular-ui-router/release/angular-ui-router.js"></script>
-    <script src="/app/socket.io.js"></script>
+    <script src="/app/js/socket.io.js"></script>
     <script src="/node_modules/popper.js/dist/popper.js"></script>
     <script src="/node_modules/jquery/dist/jquery.js"></script>
 
-    <script src="/app/app.js"></script>
-    <script src="/app/main-view-controller.js"></script>
-    <script src="/app/nav-controller.js"></script>
+    <script src="/app/js/app.js"></script>
+    <script src="/app/js/controllers.js"></script>
 
 </head>
 
-<nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark" ng-controller="NavController">
-    <form class="form-inline">
-        <button class="btn btn-outline-success" type="button">Main button</button>
-        <button class="btn btn-sm align-middle btn-outline-secondary" type="button">Smaller button</button>
-    </form>
-</nav>
+<nav  class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark" ng-controller="NavController">
 
+    <a id="navbrand" class="navbar-brand">BitChow</a>
+
+
+    <div class="container" ng-show="loggedIn">
+
+    </div>
+
+    <div class="container" ng-show="!loggedIn">
+
+        <div class="container">
+            <form class="form-inline float-right">
+                <button class="btn btn-outline-success" type="button">Home</button>
+                <button class="btn btn-m align-middle btn-outline-secondary" type="button">LogOut</button>
+            </form>
+        </div>
+
+    </div>
+
+</nav>
 
 <body>
     <div ui-view></div>
