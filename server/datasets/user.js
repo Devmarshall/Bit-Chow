@@ -4,6 +4,7 @@ module.exports = mongoose.model('User', {
     email: String,
     userName: String,
     password: String,
+    profileImg: String,
     following: [{
         email: String,
         userName: String,
@@ -14,5 +15,8 @@ module.exports = mongoose.model('User', {
         userName: String,
         id: String
     }],
-    profileImg: String
+    posts: [{
+        img: String,
+        txt: String
+    }]
 })

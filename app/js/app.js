@@ -24,7 +24,8 @@
 
             $stateProvider.state('signup', {
                 url: '/signup',
-                templateUrl: '/app/templates/signup.html'
+                templateUrl: '/app/templates/signup.html',
+                controller: 'SignUpController'
             })
 
         })

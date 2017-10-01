@@ -23,25 +23,9 @@
 
 </head>
 
-<nav  class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark" ng-controller="NavController">
+<nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark" ng-controller="NavController">
 
-    <a id="navbrand" class="navbar-brand">BitChow</a>
-
-
-    <div class="container" ng-show="loggedIn">
-
-    </div>
-
-    <div class="container" ng-show="!loggedIn">
-
-        <div class="container">
-            <form class="form-inline float-right">
-                <button class="btn btn-outline-success" type="button">Home</button>
-                <button class="btn btn-m align-middle btn-outline-secondary" type="button">LogOut</button>
-            </form>
-        </div>
-
-    </div>
+    <a id="navbrand" class="navbar-brand" ui-sref='newbie'>BitChow</a>
 
 </nav>
 
