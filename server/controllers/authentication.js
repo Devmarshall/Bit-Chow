@@ -7,14 +7,23 @@ module.exports.signUp = function (req, res) {
     user.save();
 
     res.json(user);
+
+    User.find(user, function (err, results) {
+        if (err) {
+            console.log(err);
+        } else {
+            var UserData = results[0];
+
+        }
+    })
 }
 
-module.exports.logIn = function(req,res){
-    User.find(req.body, function(err, results){
-        if(err){
+module.exports.logIn = function (req, res) {
+    User.find(req.body, function (err, results) {
+        if (err) {
             console.log(err)
         }
-        if(results && results.length ===1){
+        if (results && results.length === 1) {
             var UserData = results[0];
 
             res.json({
@@ -24,6 +33,5 @@ module.exports.logIn = function(req,res){
             })
         }
     })
-
 
 }

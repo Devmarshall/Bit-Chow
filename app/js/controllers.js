@@ -2,10 +2,20 @@
     angular.module('BitChow')
         .controller('NavController', ['$scope', '$http', '$state', '$interval', function ($scope, $http, $state, $interval) {
 
-            $scope.logIn = function () {
-                $scope.loggedIn = true
+            $scope.homeClick = function () {
+                if ($scope.loggedIn) {
+                    $state.go('main');
+                } else {
+                    $state.go('newbie');
+                }
             }
 
+            if (localStorage['User-Data']) {
+                $scope.loggedIn = true;
+                $state.go('main');
+            } else {
+                $scope.loggedIn = false;
+            }
             $scope.logOut = function () {
                 localStorage.clear();
                 $scope.loggedIn = false;
@@ -14,15 +24,26 @@
         }])
 
         .controller('MainViewController', ['$scope', '$http', '$state', function ($scope, $http, $state) {
-
+            if (localStorage['User-Data']) {
+                $scope.loggedIn = true;
+                $state.go('main');
+            } else {
+                $scope.loggedIn = false;
+                $state.go('newbie');
+            }
         }])
 
         .controller('LoginController', ['$scope', '$state', '$http', function ($scope, $state, $http) {
 
-            $scope.login = function () {
-
+            if (localStorage['User-Data']) {
+                $scope.loggedIn = true;
+                $state.go('main');
+            } else {
+                $scope.loggedIn = false;
+            }
+            $scope.logIn = function () {
                 $http.post('/api/user/login', $scope.user).then(function (response) {
-                    localStorage.setItem('UserData', JSON.stringify(response.data));
+                    localStorage.setItem('User-Data', JSON.stringify(response.data));
                     $scope.loggedIn = true;
                     $state.go('main');
                 }, function (err) {
@@ -40,7 +61,6 @@
             } else {
                 $scope.loggedIn = false;
             }
-
             $scope.signUp = function () {
                 console.log($scope.newUser);
                 var testUser = angular.copy($scope.newUser);
@@ -68,6 +88,12 @@
 
         .controller('NewbieController', ['$scope', '$state', function ($scope, $state) {
 
+            if (localStorage['User-Data']) {
+                $scope.loggedIn = true;
+                $state.go('main');
+            } else {
+                $scope.loggedIn = false;
+            }
         }])
 
     function validateEmail(email) {

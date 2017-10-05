@@ -25,7 +25,8 @@
 
 <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark" ng-controller="NavController">
 
-    <a id="navbrand" class="navbar-brand" ui-sref='newbie'>BitChow</a>
+    <a id="navbrand" class="navbar-brand" ng-click="homeClick()">BitChow</a>
+    <a class="btn btn-primary btn-light nav-link" ng-click="logOut()"  ng-if="loggedIn" ui-sref='newbie'>LogOut</a>
 
 </nav>
 

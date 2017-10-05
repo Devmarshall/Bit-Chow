@@ -18,5 +18,9 @@ module.exports = mongoose.model('User', {
     posts: [{
         img: String,
         txt: String
-    }]
+    }],
+    signUpDate: {
+        type: Date,
+        default: Date.now
+    }
 })
