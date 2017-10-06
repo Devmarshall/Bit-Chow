@@ -10,12 +10,18 @@
                 }
             }
 
-            if (localStorage['User-Data']) {
-                $scope.loggedIn = true;
-                $state.go('main');
-            } else {
-                $scope.loggedIn = false;
-            }
+            $interval(function(){
+                if (localStorage['User-Data']) {
+                    $scope.loggedIn = true;
+                    $state.go('main');
+                } else {
+                    $scope.loggedIn = false;
+                }
+    
+            }, 20, 2)
+
+
+
             $scope.logOut = function () {
                 localStorage.clear();
                 $scope.loggedIn = false;
@@ -65,18 +71,17 @@
                 console.log($scope.newUser);
                 var testUser = angular.copy($scope.newUser);
                 if (testUser.password1 !== testUser.password2 || validateEmail(testUser.email) == false) {
-                    if (testUser.password1 !== testUser.password2) {
-                        console.log('incorrect passwords')
-                    }
-                    if (validateEmail(testUser.email) == false) {
-                        console.log('invalid emails');
-                    }
+                    console.log('bad details');
                 } else {
                     var newUser = {}
                     newUser.email = testUser.email;
                     newUser.password = testUser.password1;
 
-                    $http.post('/api/user/signup', newUser).then(function (response) {}, function (err) {
+                    $http.post('/api/user/signup', newUser).then(function (response) {
+                        localStorage.setItem('User-Data', JSON.stringify(response.data));
+                        $scope.loggedIn = true;
+                        $state.go('main');
+                    }, function (err) {
                         if (err) {
                             console.log(err);
                         }
