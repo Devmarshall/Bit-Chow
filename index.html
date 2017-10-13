@@ -23,12 +23,33 @@
 
 </head>
 
-<nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark" ng-controller="NavController">
+<div class="center">
+    <nav class="navbar navbar-dark bg-dark sticky-top navbar-expand-lg navbar-light bg-light" ng-controller="NavController">
+        <a class="navbar-brand btn-default" id="navbrand" ng-click="homeClick()" href="#">BitChow.io</a>
+        <button ng-if='loggedIn' class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+            aria-label="Toggle navigation">
+                      <span class="navbar-toggler-icon"></span>
+                    </button>
+        <div class="collapse navbar-collapse" id="navbarNav" ng-if="loggedIn">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" ui-sref='main'>Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" ui-sref='follow'>Follow</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" ui-sref='editProfile' href="#">Edit {{user.userName}}'s profile</a>
+                </li>
 
-    <a id="navbrand" href="#" class="navbar-brand btn-default" ng-click="homeClick()">BitChow</a>
-    <a class="btn btn-primary btn-light nav-link" ng-click="logOut()"  ng-if="loggedIn" ui-sref='newbie'>LogOut</a>
+                <li>
+                    <a style="color: black" class="btn btn-primary btn-light dark nav-item nav-link" ng-click="logOut()" href='#' ui-sref='newbie'>Log Out</a>
+                </li>
 
-</nav>
+            </ul>
+        </div>
+    </nav>
+</div>
 
 <body>
     <div ui-view></div>

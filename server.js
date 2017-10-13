@@ -7,7 +7,9 @@ var socketio = require('socket.io');
 var schedule = require('node-schedule');
 var morgan = require('morgan');
 
-var authenticationcontroller = require('./server/controllers/authentication.js');
+var authenticationController = require('./server/controllers/authentication.js');
+var tweetController = require('./server/controllers/tweets.js');
+var userController = require('./server/controllers/users.js');
 
 var app = express();
 
@@ -19,8 +21,13 @@ app.use('/app', express.static(__dirname + '/app'));
 app.use('/node_modules', express.static(__dirname + '/node_modules'));
 app.use('/bower_components', express.static(__dirname + '/bower_components'));
 
-app.post('/api/user/signup', authenticationcontroller.signUp);
-app.post('/api/user/login', authenticationcontroller.logIn);
+app.post('/api/user/signup', authenticationController.signUp);
+app.post('/api/user/login', authenticationController.logIn);
+
+app.post('/api/user/postTweet', tweetController.postTweet);
+app.get('/api/main/getAllTweets', tweetController.getTweets);
+app.post('/api/user/getFollowableUsers', userController.getFollowableUsers);
+app.post('/api/user/followUser', userController.followUser);
 
 app.get('/', function (req, res) {
     res.sendFile('index.html', {

@@ -1,0 +1,23 @@
+<div class="form center container">
+
+    <div class="col-sm-10 col-sm-offset-1">
+
+        <form>
+            <div class="form-group">
+                <label for="userName">UserName</label>
+                <div id="userName">
+                    <input type="text" ng-model="updatedUser.userName" class="form-control" placeholder="Enter new Username">
+                </div>
+
+                <label for="bio">Bio</label>
+                <div id="bio">
+                    <input ng-model="updatedUser.bio" style="margin-bottom: 1%" type="text" class="form-control" placeholder="Tell me about yourself">
+                </div>
+
+            </div>
+            <button ng-click="updateProfile()" type="submit" class="btn btn-primary">Update your shit</button>
+        </form>
+
+    </div>
+
+</div>

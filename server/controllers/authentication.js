@@ -1,6 +1,4 @@
-var mongoose = require('mongoose');
 var User = require('../datasets/user');
-
 
 module.exports.signUp = function (req, res) {
     var user = new User(req.body);

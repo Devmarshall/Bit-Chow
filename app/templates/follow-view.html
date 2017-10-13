@@ -1,0 +1,9 @@
+<div class="container center">
+    <div class="card w-50">
+        <div ng-repeat="user in followableUsers" class="card-body">
+            <h4 class="card-title">{{user.userName}}</h4>
+            <p class="card-text">{{user.email}}</p>
+            <a href="" ng-click="followUser(user._id)" class="btn btn-primary">Follow</a>
+        </div>
+    </div>
+</div>

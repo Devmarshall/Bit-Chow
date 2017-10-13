@@ -1,5 +1,36 @@
-<div class="col-sm-10 col-sm-offset-1">
+<div class="container center drop">
+    <!-- <h1>Nimi for PRO!!!</h1> -->
+    <h2 id="greeting">Hello, {{user.userName}}</h2>
+</div>
+
+<div class="container center drop">
+    <div id="newTweet" class="input-group input-group-md center">
+        <textarea type="text" ng-model="newTweet" class="form-control" placeholder="New Tweet" aria-label="New Tweet"></textarea>
+        <span class="input-group-btn"></span>
+        <button class="btn btn-success" ng-click="postTweet()" type="button">Tweet</button>
+        </span>
+    </div>
+</div>
+
+<div class="jumbotron-fluid drop">
     <div class="container center">
-        <h1>Nimi for PRO!!!</h1>
+        <table class="tweet section center">
+            <tr ng-repeat="tweet in allTweets">
+                <td>{{tweet.userName}}</td>
+
+                <td>
+                    <strong>{{tweet.postDate | date: 'MM/dd/yyyy hh:mm'}}</strong> <br>
+                    <p>{{tweet.content}}</p>
+                </td>
+            </tr>
+
+        </table>
+    </div>
+</div>
+
+<div class="jumbotron-fluid drop">
+    <div class="container center">
+        <h2>{{user.userName}} for PRO!!!</h2>
+        <p>{{user.userName}} is actually quite cool cause... well, I said so</p>
     </div>
 </div>

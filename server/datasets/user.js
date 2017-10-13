@@ -3,21 +3,14 @@ var mongoose = require('mongoose');
 module.exports = mongoose.model('User', {
     email: String,
     userName: String,
+    bio: String,
     password: String,
     profileImg: String,
     following: [{
-        email: String,
-        userName: String,
-        id: String
+        userId: String
     }],
     followers: [{
-        email: String,
-        userName: String,
-        id: String
-    }],
-    posts: [{
-        img: String,
-        txt: String
+        userId: String
     }],
     signUpDate: {
         type: Date,

@@ -28,5 +28,17 @@
                 controller: 'SignUpController'
             })
 
+            $stateProvider.state('editProfile', {
+                url: '/editProfile',
+                templateUrl: '/app/templates/edit-profile.html',
+                controller: 'EditProfileController'
+            })
+
+            $stateProvider.state('follow', {
+                url: '/follow',
+                templateUrl: '/app/templates/follow-view.html',
+                controller: 'FollowViewController'
+            })
+
         })
 }());
