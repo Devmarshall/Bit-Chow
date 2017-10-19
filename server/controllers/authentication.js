@@ -1,4 +1,4 @@
-var User = require('../datasets/user');
+var User = require('../models/user');
 
 module.exports.signUp = function (req, res) {
     var user = new User(req.body);

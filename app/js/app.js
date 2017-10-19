@@ -40,5 +40,11 @@
                 controller: 'FollowViewController'
             })
 
+            $stateProvider.state('messaging', {
+                url: '/direct-messaging',
+                templateUrl: '/app/templates/direct-messaging-view.html',
+                controller: 'DirectMessagingController'
+            })
+
         })
 }());

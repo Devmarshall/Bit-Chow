@@ -26,8 +26,8 @@
 <div class="center">
     <nav class="navbar navbar-dark bg-dark sticky-top navbar-expand-lg navbar-light bg-light" ng-controller="NavController">
         <a class="navbar-brand btn-default" id="navbrand" ng-click="homeClick()" href="#">BitChow.io</a>
-        <button ng-if='loggedIn' class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
-            aria-label="Toggle navigation">
+        <button ng-if='loggedIn' class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
+            aria-expanded="false" aria-label="Toggle navigation">
                       <span class="navbar-toggler-icon"></span>
                     </button>
         <div class="collapse navbar-collapse" id="navbarNav" ng-if="loggedIn">
@@ -41,11 +41,12 @@
                 <li class="nav-item">
                     <a class="nav-link" ui-sref='editProfile' href="#">Edit {{user.userName}}'s profile</a>
                 </li>
-
+                <li class="nav-item">
+                    <a class="nav-link" ui-sref='messaging' href="#">Direct Messages</a>
+                </li>
                 <li>
                     <a style="color: black" class="btn btn-primary btn-light dark nav-item nav-link" ng-click="logOut()" href='#' ui-sref='newbie'>Log Out</a>
                 </li>
-
             </ul>
         </div>
     </nav>

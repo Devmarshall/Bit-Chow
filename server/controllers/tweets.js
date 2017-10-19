@@ -1,4 +1,4 @@
-var Tweet = require('../datasets/tweet.js')
+var Tweet = require('../models/tweet.js')
 
 module.exports.postTweet = function (req, res) {
     var tweet = new Tweet(req.body);

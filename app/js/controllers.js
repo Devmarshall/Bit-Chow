@@ -155,9 +155,6 @@
                     userName: $scope.updatedUser.userName,
                     profileImg: $scope.updatedUser.userImg
                 }
-
-                console.log(updatedDetails);
-
             }
 
         }])
@@ -173,7 +170,6 @@
 
             getUsers();
 
-
             $scope.followUser = function (userId) {
 
                 var followIds = {
@@ -187,15 +183,39 @@
                     console.log(err);
                 })
 
+
+
             }
 
             function getUsers() {
                 $http.post('/api/user/getFollowableUsers', $scope.user).then(function (response) {
+                    console.log(response.data);
                     $scope.followableUsers = response.data;
+
+                    for (var i = 0; i < $scope.followableUsers.length; i++) {
+                        if ($scope.followableUsers[i].following.indexOf($scope.user._id)) {
+                            $scope.followableUsers[i].isFollowing = true;
+                        } else {
+                            $scope.followableUsers[i].isFollowing = false;
+                        }
+                    }
+
                 }, function (err) {
                     console.log(err)
-                })
+                });
             }
+
+        }])
+
+        .controller('DirectMessagingController', ['$state', '$scope', '$http', function ($state, $scope, $http) {
+            if (localStorage['User-Data']) {
+                $scope.loggedIn = true;
+                $scope.user = JSON.parse(localStorage['User-Data']);
+            } else {
+                $scope.loggedIn = false;
+                $state.go('newbie');
+            }
+
         }])
 
     function validateEmail(email) {

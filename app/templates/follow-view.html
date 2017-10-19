@@ -3,7 +3,9 @@
         <div ng-repeat="user in followableUsers" class="card-body">
             <h4 class="card-title">{{user.userName}}</h4>
             <p class="card-text">{{user.email}}</p>
-            <a href="" ng-click="followUser(user._id)" class="btn btn-primary">Follow</a>
+            <a ng-hide="{{user.isFollowing}}" href="" ng-click="followUser(user._id)" class="btn btn-primary">Follow</a>
+            <a ng-show="{{!user.isFollowing}}" href="" ng-click="unFollowUser(user._id)" class="btn btn-primary">UnFollow</a>
+
         </div>
     </div>
 </div>
