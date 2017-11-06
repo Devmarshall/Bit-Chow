@@ -39,6 +39,5 @@ var server = app.listen(3003, 'localhost', function () {
     var host = server.address().address;
     var port = server.address().port;
 
-    console.log('Server running...');
-    console.log('Listening at http://%s:%s...', host, port);
+    console.log('Server running at http://%s:%s...', host, port);
 })
