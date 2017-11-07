@@ -13,7 +13,10 @@ var userController = require('./server/controllers/users.js');
 
 var app = express();
 
-mongoose.connect('mongodb://localhost:27017/BitChow');
+// var mongoUrl = 'mongodb://localhost:27017/BitChow';
+var mongoUrl = 'mongodb://admin:6HQJzwwPm_!ksgsx@ds151355.mlab.com:51355/bitchow';
+
+mongoose.connect(mongoUrl);
 
 app.use(bodyParser.json());
 app.use(morgan('dev'));
