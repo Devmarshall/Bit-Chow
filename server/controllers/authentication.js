@@ -1,6 +1,7 @@
 var User = require('../models/user');
 
 module.exports.signUp = function (req, res) {
+    
     var user = new User(req.body);
     user.save();
 
@@ -35,5 +36,4 @@ module.exports.logIn = function (req, res) {
             })
         }
     })
-
 }
