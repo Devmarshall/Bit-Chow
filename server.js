@@ -20,6 +20,7 @@ mongoose.connect(mongoUrl);
 
 app.use(bodyParser.json());
 app.use(morgan('dev'));
+
 app.use('/app', express.static(__dirname + '/app'));
 app.use('/node_modules', express.static(__dirname + '/node_modules'));
 app.use('/bower_components', express.static(__dirname + '/bower_components'));
@@ -38,9 +39,9 @@ app.get('/', function (req, res) {
     });
 });
 
-var server = app.listen(3003, 'localhost', function () {
+var server = app.listen(process.env.PORT || 8080, function () {
     var host = server.address().address;
     var port = server.address().port;
 
-    console.log('Server running at http://%s:%s...', host, port);
+    console.log('BitChow running at http://%s:%s...', host, port);
 })
