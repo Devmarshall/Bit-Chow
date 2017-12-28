@@ -34,9 +34,7 @@ app.post('/api/user/getFollowableUsers', userController.getFollowableUsers);
 app.post('/api/user/followUser', userController.followUser);
 
 app.get('/', function (req, res) {
-    res.sendFile('index.html', {
-        "root": __dirname
-    });
+    res.sendFile(__dirname + '/index.html');
 });
 
 var herokuPort = process.env.PORT || 8080;
